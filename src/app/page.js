@@ -1,5 +1,5 @@
 async function getData() {
-    const res = await fetch('https://bilmervipapi.pythonanywhere.com/next_api/all-news/', { next: { revalidate: 3 } })
+    const res = await fetch('https://bilmervipapi.pythonanywhere.com/next_api/all-news/', { next: { revalidate: 3 } }, { cache: 'no-store' })
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
